@@ -39,8 +39,8 @@ public class Producto {
 	private String name;
 	
 	@Column(name = "pro_precio")
-	@NotBlank(message = "*El precio es obligatorio")
-	@NotEmpty(message = "*Por favor ingrese el precio")
+	//@NotBlank(message = "*El precio es obligatorio")
+	//@NotEmpty(message = "*Por favor ingrese el precio")
 	@NotNull
 	private BigDecimal price;
 }

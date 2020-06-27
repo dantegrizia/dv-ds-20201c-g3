@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import ar.edu.davinci.dvds20201cg3.modelo.Producto;
 
-
 @Repository("productosRepositorio")
 public interface ProductoRepositorio extends JpaRepository<Producto, Long>{
 
