@@ -57,6 +57,14 @@ public class ProductoServicio {
 	}
 	
 	public Producto grabarProducto(Producto producto) {
+		
+		Producto prod = null;
+		try {
+			prod = productoRepositorio.save(producto);
+		}catch (Exception e){
+			LOGGER.info("Mensaje: " + e.getMessage());
+			LOGGER.info("Causa: " + e.getCause());
+		}
 		return productoRepositorio.save(producto);
 	}
 	

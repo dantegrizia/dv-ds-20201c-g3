@@ -2,6 +2,7 @@ package ar.edu.davinci.dvds20201cg3.servicio;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import ar.edu.davinci.dvds20201cg3.modelo.Orden;
@@ -12,14 +13,19 @@ import ar.edu.davinci.dvds20201cg3.repositorio.OrdenRepositorio;
 @Service
 public class OrdenServicio {
 
-	@Autowired
-	OrdenRepositorio ordenRepositorio;
+	private final OrdenRepositorio ordenRepositorio;
+	
+	private final OrdenItemRepositorio  ordenItemRepositorio;
 	
 	@Autowired
-	OrdenItemRepositorio  ordenItemRepositorio;
+	public OrdenServicio(final OrdenRepositorio ordenRepositorio, OrdenItemRepositorio  ordenItemRepositorio) {
+		this.ordenItemRepositorio = ordenItemRepositorio;
+		this.ordenRepositorio = ordenRepositorio;
+	}
 	
 	
-	public Page<Orden> listarOrden(){
+	public Page<Orden> listarOrden(Pageable pageable){
+		ordenRepositorio.findAll(pageable); 
 		return null;
 	}
 	

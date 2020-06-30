@@ -9,12 +9,14 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -33,20 +35,21 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@SequenceGenerator(name="S_ORDENES", sequenceName="S_ORDENES")
 public class Orden {
 	
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "S_ORDENES")
 	@Column(name = "ord_id")
 	private Long id;
 	
-	@ManyToOne(targetEntity = Cliente.class, cascade = CascadeType.ALL)
+	@ManyToOne(targetEntity = Cliente.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name="ord_cli_id", referencedColumnName="cli_id")
 	private Cliente client;
 	
 	
-    @OneToMany(targetEntity = OrdenItem.class, mappedBy = "orden")
+    @OneToMany(targetEntity = OrdenItem.class, mappedBy = "orden", fetch = FetchType.EAGER)
     private List<OrdenItem> items;
     
 	@Column(name = "ord_fecha")
