@@ -10,14 +10,8 @@ import ar.edu.davinci.dvds20201cg3.controlador.rest.request.ClienteUpdateRequest
 import ar.edu.davinci.dvds20201cg3.controlador.rest.request.ProductoInsertRequest;
 import ar.edu.davinci.dvds20201cg3.controlador.rest.request.ProductoUpdateRequest;
 import ar.edu.davinci.dvds20201cg3.controlador.rest.response.ClienteResponse;
-import ar.edu.davinci.dvds20201cg3.controlador.rest.response.OrdenClienteResponse;
-import ar.edu.davinci.dvds20201cg3.controlador.rest.response.OrdenItemResponse;
-import ar.edu.davinci.dvds20201cg3.controlador.rest.response.OrdenProductoResponse;
-import ar.edu.davinci.dvds20201cg3.controlador.rest.response.OrdenResponse;
 import ar.edu.davinci.dvds20201cg3.controlador.rest.response.ProductoResponse;
 import ar.edu.davinci.dvds20201cg3.modelo.Cliente;
-import ar.edu.davinci.dvds20201cg3.modelo.Orden;
-import ar.edu.davinci.dvds20201cg3.modelo.OrdenItem;
 import ar.edu.davinci.dvds20201cg3.modelo.Producto;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
@@ -40,16 +34,16 @@ public class OrikaConfiguration {
 		mapperFactory.classMap(Cliente.class, ClienteResponse.class).byDefault().register();
 		mapperFactory.classMap(Cliente.class, ClienteInsertRequest.class).byDefault().register();
 		mapperFactory.classMap(Cliente.class, ClienteUpdateRequest.class).byDefault().register();
-		mapperFactory.classMap(Cliente.class, OrdenClienteResponse.class).byDefault().register();
+		//mapperFactory.classMap(Cliente.class, OrdenClienteResponse.class).byDefault().register();
 		
 		
 		mapperFactory.classMap(Producto.class, ProductoResponse.class).byDefault().register();
 		mapperFactory.classMap(Cliente.class, ProductoInsertRequest.class).byDefault().register();
 		mapperFactory.classMap(Cliente.class, ProductoUpdateRequest.class).byDefault().register();
-		mapperFactory.classMap(Cliente.class, OrdenProductoResponse.class).byDefault().register();
+		//mapperFactory.classMap(Cliente.class, OrdenProductoResponse.class).byDefault().register();
 		
-		mapperFactory.classMap(Orden.class, OrdenResponse.class).byDefault().register();
-		mapperFactory.classMap(OrdenItem.class, OrdenItemResponse.class).byDefault().register();
+		//mapperFactory.classMap(Orden.class, OrdenResponse.class).byDefault().register();
+		//mapperFactory.classMap(OrdenItem.class, OrdenItemResponse.class).byDefault().register();
 		
 		
 		return mapperFactory.getMapperFacade();

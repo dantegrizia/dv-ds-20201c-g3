@@ -1,5 +1,5 @@
 package ar.edu.davinci.dvds20201cg3.repositorio;
-
+/*
 import java.util.List;
 
 import org.springframework.dao.DataAccessException;
@@ -16,3 +16,4 @@ public interface OrdenItemRepositorio extends JpaRepository<OrdenItem, Long>{
 	//public List<OrdenItem> searchByName(@Param("nombre") String name) throws DataAccessException;
 
 }
+*/

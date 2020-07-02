@@ -498,3 +498,121 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No b
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
 	... 45 common frames omitted
+2020-07-02 18:09:15,452 INFO org.springframework.boot.StartupInfoLogger [main] Starting DvDs20201cG3ApplicationTests on Dante-PC with PID 13716 (started by Dante in C:\Users\Dante\git\dv-ds-20201c-g3\dv-ds-20201c-g3)
+2020-07-02 18:09:15,455 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-02 18:09:15,456 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-02 18:09:17,466 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-02 18:09:17,608 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 125ms. Found 2 JPA repository interfaces.
+2020-07-02 18:09:18,747 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-02 18:09:18,767 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-07-02 18:09:19,175 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-07-02 18:09:19,318 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-02 18:09:19,458 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-02 18:09:19,803 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-02 18:09:20,155 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-07-02 18:09:21,290 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [task-1] drop table if exists clientes CASCADE 
+2020-07-02 18:09:21,291 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [task-1] drop table if exists productos CASCADE 
+2020-07-02 18:09:21,292 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [task-1] drop sequence if exists s_clientes
+2020-07-02 18:09:21,292 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [task-1] drop sequence if exists s_productos
+2020-07-02 18:09:21,295 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [task-1] create sequence s_clientes start with 1 increment by 50
+2020-07-02 18:09:21,300 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [task-1] create sequence s_productos start with 1 increment by 50
+2020-07-02 18:09:21,301 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [task-1] create table clientes (cli_id bigint not null, cli_email varchar(255), cli_apellido varchar(30) not null, cli_nombre varchar(30) not null, cli_password varchar(255) not null, primary key (cli_id))
+2020-07-02 18:09:21,309 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [task-1] create table productos (pro_id bigint not null, pro_nombre varchar(45) not null, pro_precio decimal(19,2) not null, primary key (pro_id))
+2020-07-02 18:09:21,311 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [task-1] alter table clientes add constraint UK7b87nbrm1jck1x3q1mj1nhj7b unique (cli_email)
+2020-07-02 18:09:21,318 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-02 18:09:21,327 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-02 18:09:22,326 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-02 18:09:23,280 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-07-02 18:09:24,023 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-02 18:09:24,092 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories…
+2020-07-02 18:09:24,315 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Spring Data repositories initialized!
+2020-07-02 18:09:24,337 INFO org.springframework.boot.StartupInfoLogger [main] Started DvDs20201cG3ApplicationTests in 9.572 seconds (JVM running for 11.259)
+2020-07-02 18:09:24,800 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [ar.edu.davinci.dvds20201cg3.modelo.ClienteTest], using SpringBootContextLoader
+2020-07-02 18:09:24,803 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [ar.edu.davinci.dvds20201cg3.modelo.ClienteTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-07-02 18:09:24,804 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [ar.edu.davinci.dvds20201cg3.modelo.ClienteTest]: ClienteTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-07-02 18:09:24,823 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration ar.edu.davinci.dvds20201cg3.DvDs20201cG3Application for test class ar.edu.davinci.dvds20201cg3.modelo.ClienteTest
+2020-07-02 18:09:24,831 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-07-02 18:09:24,833 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@92b1bda, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57bfca3a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@58690f5e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4b9d2cee, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1a390b8c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@337eeceb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@237d0625, org.springframework.test.context.event.EventPublishingTestExecutionListener@1a5a4f8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5392aa2b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@174f0d06, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5cc87de4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@706690e1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3663af34, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@59aba3c3]
+2020-07-02 18:09:24,900 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] select cliente0_.cli_id as cli_id1_0_0_, cliente0_.cli_email as cli_emai2_0_0_, cliente0_.cli_apellido as cli_apel3_0_0_, cliente0_.cli_nombre as cli_nomb4_0_0_, cliente0_.cli_password as cli_pass5_0_0_ from clientes cliente0_ where cliente0_.cli_id=?
+2020-07-02 18:09:24,908 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [1] as [BIGINT] - [1]
+2020-07-02 18:09:24,940 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] select cliente0_.cli_id as cli_id1_0_0_, cliente0_.cli_email as cli_emai2_0_0_, cliente0_.cli_apellido as cli_apel3_0_0_, cliente0_.cli_nombre as cli_nomb4_0_0_, cliente0_.cli_password as cli_pass5_0_0_ from clientes cliente0_ where cliente0_.cli_id=?
+2020-07-02 18:09:24,941 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [1] as [BIGINT] - [1]
+2020-07-02 18:09:24,998 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] update clientes set cli_email=?, cli_apellido=?, cli_nombre=?, cli_password=? where cli_id=?
+2020-07-02 18:09:25,000 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [1] as [VARCHAR] - [abc@gmail.com]
+2020-07-02 18:09:25,001 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [2] as [VARCHAR] - [Gupta]
+2020-07-02 18:09:25,003 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [3] as [VARCHAR] - [Lokesh-Lokesh]
+2020-07-02 18:09:25,003 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [4] as [VARCHAR] - [abc]
+2020-07-02 18:09:25,004 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [5] as [BIGINT] - [1]
+2020-07-02 18:09:25,143 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] select cliente0_.cli_id as cli_id1_0_, cliente0_.cli_email as cli_emai2_0_, cliente0_.cli_apellido as cli_apel3_0_, cliente0_.cli_nombre as cli_nomb4_0_, cliente0_.cli_password as cli_pass5_0_ from clientes cliente0_
+2020-07-02 18:09:25,157 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] select cliente0_.cli_id as cli_id1_0_0_, cliente0_.cli_email as cli_emai2_0_0_, cliente0_.cli_apellido as cli_apel3_0_0_, cliente0_.cli_nombre as cli_nomb4_0_0_, cliente0_.cli_password as cli_pass5_0_0_ from clientes cliente0_ where cliente0_.cli_id=?
+2020-07-02 18:09:25,158 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [1] as [BIGINT] - [1]
+2020-07-02 18:09:25,164 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] select cliente0_.cli_id as cli_id1_0_0_, cliente0_.cli_email as cli_emai2_0_0_, cliente0_.cli_apellido as cli_apel3_0_0_, cliente0_.cli_nombre as cli_nomb4_0_0_, cliente0_.cli_password as cli_pass5_0_0_ from clientes cliente0_ where cliente0_.cli_id=?
+2020-07-02 18:09:25,165 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [1] as [BIGINT] - [1]
+2020-07-02 18:09:25,167 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] update clientes set cli_email=?, cli_apellido=?, cli_nombre=?, cli_password=? where cli_id=?
+2020-07-02 18:09:25,168 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [1] as [VARCHAR] - [xyz@email.com]
+2020-07-02 18:09:25,169 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [2] as [VARCHAR] - [Gupta]
+2020-07-02 18:09:25,170 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [3] as [VARCHAR] - [Lokesh-Lokesh]
+2020-07-02 18:09:25,170 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [4] as [VARCHAR] - [abc]
+2020-07-02 18:09:25,171 TRACE org.hibernate.type.descriptor.sql.BasicBinder [main] binding parameter [5] as [BIGINT] - [1]
+2020-07-02 18:09:25,173 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] SQL Error: 23505, SQLState: 23505
+2020-07-02 18:09:25,174 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Violación de indice de Unicidad ó Clave primaria: "PUBLIC.UK7B87NBRM1JCK1X3Q1MJ1NHJ7B_INDEX_6 ON PUBLIC.CLIENTES(CLI_EMAIL) VALUES 2"
+Unique index or primary key violation: "PUBLIC.UK7B87NBRM1JCK1X3Q1MJ1NHJ7B_INDEX_6 ON PUBLIC.CLIENTES(CLI_EMAIL) VALUES 2"; SQL statement:
+update clientes set cli_email=?, cli_apellido=?, cli_nombre=?, cli_password=? where cli_id=? [23505-200]
+2020-07-02 18:09:25,244 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-02 18:09:25,244 INFO org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-07-02 18:09:25,246 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [SpringContextShutdownHook] drop table if exists clientes CASCADE 
+2020-07-02 18:09:25,251 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [SpringContextShutdownHook] drop table if exists productos CASCADE 
+2020-07-02 18:09:25,254 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [SpringContextShutdownHook] drop sequence if exists s_clientes
+2020-07-02 18:09:25,255 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [SpringContextShutdownHook] drop sequence if exists s_productos
+2020-07-02 18:09:25,258 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-02 18:09:25,259 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-07-02 18:09:25,262 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-07-02 18:09:54,376 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting DvDs20201cG3Application on Dante-PC with PID 3176 (C:\Users\Dante\git\dv-ds-20201c-g3\dv-ds-20201c-g3\target\classes started by Dante in C:\Users\Dante\git\dv-ds-20201c-g3\dv-ds-20201c-g3)
+2020-07-02 18:09:54,380 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-02 18:09:54,382 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-07-02 18:09:54,438 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-02 18:09:54,439 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-02 18:09:55,766 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-02 18:09:55,831 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 57ms. Found 2 JPA repository interfaces.
+2020-07-02 18:09:56,565 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8081 (http)
+2020-07-02 18:09:56,573 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8081"]
+2020-07-02 18:09:56,573 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-07-02 18:09:56,573 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-02 18:09:56,689 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-07-02 18:09:56,689 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2250 ms
+2020-07-02 18:09:56,896 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-07-02 18:09:57,255 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-07-02 18:09:57,261 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/dv-ds-20201c-g3?serverTimezone=UTC'
+2020-07-02 18:09:57,520 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-02 18:09:57,565 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-02 18:09:57,610 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-02 18:09:57,716 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-02 18:09:57,820 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-07-02 18:09:58,538 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-02 18:09:58,544 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-02 18:09:58,747 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [task-2] LiveReload server is running on port 35729
+2020-07-02 18:09:58,988 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-02 18:09:59,319 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [restartedMain] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-07-02 18:09:59,863 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2020-07-02 18:09:59,918 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8081"]
+2020-07-02 18:09:59,947 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-02 18:09:59,949 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Triggering deferred initialization of Spring Data repositoriesâ€¦
+2020-07-02 18:10:00,060 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Spring Data repositories initialized!
+2020-07-02 18:10:00,071 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started DvDs20201cG3Application in 6.244 seconds (JVM running for 7.271)
+2020-07-02 18:10:02,514 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(10)-127.0.0.1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-02 18:10:02,515 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(10)-127.0.0.1] Initializing Servlet 'dispatcherServlet'
+2020-07-02 18:10:02,528 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(10)-127.0.0.1] Completed initialization in 13 ms
+2020-07-02 18:10:44,586 INFO ar.edu.davinci.dvds20201cg3.controlador.rest.ProductoRestControlador [http-nio-8081-exec-1] lista al producto solicitado
+2020-07-02 18:11:01,173 INFO ar.edu.davinci.dvds20201cg3.controlador.rest.ProductoRestControlador [http-nio-8081-exec-3] lista al producto solicitado
+2020-07-02 18:11:09,765 INFO ar.edu.davinci.dvds20201cg3.servicio.ProductoServicio [http-nio-8081-exec-4] buscarProductoPorNombre: nombre: papel
+2020-07-02 18:11:09,784 INFO ar.edu.davinci.dvds20201cg3.servicio.ProductoServicio [http-nio-8081-exec-4] productos.size: 1
+2020-07-02 18:11:16,527 INFO ar.edu.davinci.dvds20201cg3.controlador.rest.ProductoRestControlador [http-nio-8081-exec-5] listar todos los productos paginados
+2020-07-02 18:11:16,527 INFO ar.edu.davinci.dvds20201cg3.servicio.ProductoServicio [http-nio-8081-exec-5] Pagegable: offset: 0 - pageSize:20
+2020-07-02 18:11:50,710 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-6] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-07-02 18:12:58,719 INFO ar.edu.davinci.dvds20201cg3.controlador.rest.ProductoRestControlador [http-nio-8081-exec-9] listar todos los productos paginados
+2020-07-02 18:12:58,719 INFO ar.edu.davinci.dvds20201cg3.servicio.ProductoServicio [http-nio-8081-exec-9] Pagegable: offset: 0 - pageSize:20
+2020-07-02 18:13:24,518 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(15)-127.0.0.1] Application shutdown requested.
+2020-07-02 18:13:24,575 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(15)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-02 18:13:24,578 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [RMI TCP Connection(15)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-02 18:13:24,581 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(15)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-07-02 18:13:24,590 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(15)-127.0.0.1] HikariPool-1 - Shutdown completed.

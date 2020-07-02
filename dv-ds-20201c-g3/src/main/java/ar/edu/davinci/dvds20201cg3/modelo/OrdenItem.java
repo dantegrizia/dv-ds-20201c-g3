@@ -1,5 +1,5 @@
 package ar.edu.davinci.dvds20201cg3.modelo;
-
+/*
 
 import java.math.BigDecimal;
 
@@ -53,3 +53,4 @@ public class OrdenItem {
 	private BigDecimal quantity;
 
 }
+*/
